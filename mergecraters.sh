@@ -35,7 +35,7 @@ then
   ogr2ogr -f 'ESRI Shapefile' $file3 $filename3.geojson
   ogrinfo $file3 -dialect SQLite -sql "UPDATE $filename3 SET Status=NULL WHERE CRATER_ID IN (SELECT CRATER_ID FROM $filename3 GROUP BY CRATER_ID HAVING COUNT(*)>1)"
   ogrinfo $file3 -dialect SQLite -sql "UPDATE $filename3 SET flagColor=\"255, 255, 0, 1\" WHERE CRATER_ID IN (SELECT CRATER_ID FROM $filename3 GROUP BY CRATER_ID HAVING COUNT(*)>1)"
-  ogrinfo $file3 -dialect SQLite -sql "DELETE from merge WHERE ROWID IN (SELECT min(ROWID) from $filename3 GROUP BY CRATER_ID HAVING COUNT(*)>1)"
+  ogrinfo $file3 -dialect SQLite -sql "DELETE from $filename3 WHERE ROWID IN (SELECT min(ROWID) from $filename3 GROUP BY CRATER_ID HAVING COUNT(*)>1)"
   rm $filename3.geojson
   ogr2ogr -f GeoJSON $filename3.geojson $file3
   rm $file3
