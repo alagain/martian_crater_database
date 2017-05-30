@@ -7,7 +7,8 @@
 ##########################################
 
 file=$2
-filename="${file%.*}"
+s=${file##*/}
+filename="${s%.*}"
 echo $file
 echo $filename
 ogr2ogr -f "ESRI Shapefile" $2 $1
