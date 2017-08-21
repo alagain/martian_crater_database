@@ -1,5 +1,4 @@
 ## Lagain_db_cratertools files
-----------------------------
 
 This catalog has been created to perform an age dating by using CraterTools on ArcGIS. 
 The last column, "tag" corresponds to craters to be taken into account for an age dating by crater counting:
