@@ -5,9 +5,11 @@ The crater ID is the same for all craters in our database than those published i
 We have attributed our new craters in another way than Robbins what he did:
 - 100-xxx if the crater is located on the northern hemisphere 
 - 200-xxx if it is located on the southern hemisphere.
+
 Columns x, y corresponds to the coordinates in the Robbins' catalog, as well as the radius in kilometer.
 We have added the column diameter, in kilometer, to be more consistent with the waycraters are presented in scientific papers 
 but conserved radius informations consistently with the original database.
+
 The status corresponds to the classification applied on Robbins crater database 
 in the review project:
 - 1=Valid craters (Simple craters without morphologic characteristics described above)
