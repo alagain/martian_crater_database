@@ -13,11 +13,11 @@ where xxx corresponds to the creation index.
 
 #### RADIUS
 Same as in the Robbins' database.
-Added craters has been defined as circles from three points placed on the crater rim: the radius is automatically computed.
+Added craters had been defined as circles from three points placed on the crater rim: the radius is automatically computed.
 
 #### X,Y
 Coordinates, same as in the Robbins' database.
-Added craters has been defined as circles from three points placed on the crater rim: the center is automatically computed.
+Added craters had been defined as circles from three points placed on the crater rim: the center is automatically computed.
 
 #### TYPE
 crater classification (int):
