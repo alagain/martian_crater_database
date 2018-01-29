@@ -1,19 +1,52 @@
 ## Lagain_crater_database file
 
-This catalog contains all craters of the Robbins catalog and 185 craters added by the reviewer team, unidentified by Robbins. 
-The crater ID is the same for all craters in our database than those published in the Robbins' catalog.
-We have attributed our new craters in another way than Robbins what he did:
-- 100-xxx if the crater is located on the northern hemisphere 
-- 200-xxx if it is located on the southern hemisphere.
+This catalog contains all craters of the Robbins catalog and craters added by the reviewer team, unidentified by Robbins.
 
-Columns x, y corresponds to the coordinates in the Robbins' catalog, as well as the radius in kilometer.
-We have added the column diameter, in kilometer, to be more consistent with the waycraters are presented in scientific papers 
-but conserved radius informations consistently with the original database.
+Columns in the catalog are described as
 
-The status corresponds to the classification applied on Robbins crater database 
-in the review project:
-- 1=Valid craters (Simple craters without morphologic characteristics described above)
-- 2=Layered ejecta craters (only Layered Ejecta Rampart Sinuous craters and Low-Aspect Ratio Layered Ejecta craters)
-- 3=Ghost craters (Degraded impact craters, the same geologic unit is superposed to the crater floor and outside to the crater)
-- 4=Secondary craters (Elongated craters or impact craters belonging to a crater chain in an area where the crater spatial density is anomalously high)
-- 5=False detections (The geologic structure identified by Robbins is not an impact craters)
+#### Crater_ID
+Same as in the Robbins' database.
+For added craters ID has been built in the following way:
+- northern hemisphere = 100-xxx,
+- southern hemisphere = 200-xxx
+where xxx corresponds to the creation index.
+
+#### RADIUS
+Same as in the Robbins' database.
+Added craters had been defined as circles from three points placed on the crater rim: the radius is automatically computed.
+
+#### X,Y
+Coordinates, same as in the Robbins' database.
+Added craters had been defined as circles from three points placed on the crater rim: the center is automatically computed.
+
+#### TYPE
+crater classification (int):
+- 1 = Valid (Simple craters without morphologic characteristics described above)
+- 2 = Layered (only Layered Ejecta Rampart Sinuous craters and Low-Aspect Ratio Layered Ejecta craters)
+- 3 = Ghost (Degraded impact craters, the same geologic unit is superposed to the crater floor and outside to the crater)
+- 4 = Secondary (Elongated craters or impact craters belonging to a crater chain in an area where the crater spatial density is anomalously high)
+- 5 = Invalid (The geologic structure identified by Robbins is not an impact craters)
+
+#### STATUS
+crater classification (string):
+- Valid
+- Layered
+- Ghost
+- Secondary
+- Invalid
+
+#### LRD_MORPH
+Layered ejecta crater morphology:
+SLE : Single Layered Ejecta
+DLE : Double Layered Ejecta
+MLE : Multiple Layered Ejecta
+LARLE : Low-Aspect Ratio Layered Ejecta
+
+#### ORIGIN
+Secondary craters for which the primary crater source has been identified.
+The primary crater ID is indicated.
+If the secondary crater is produced by a double primary crater, crater ID of both primaries is mentionned.
+
+#### ADDING
+null = Craters contained in the Robbins' database
+1 = Craters added by the reviewers
