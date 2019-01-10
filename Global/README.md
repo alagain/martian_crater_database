@@ -1,52 +1,37 @@
-## Lagain_crater_database file
-
-This catalog contains all craters of the Robbins catalog and craters added by the reviewer team, unidentified by Robbins.
+#### Lagain_crater_database file ####
 
 Columns in the catalog are described as
 
-#### Crater_ID
-Same as in the Robbins' database.
-For added craters ID has been built in the following way:
-- northern hemisphere = 100-xxx,
-- southern hemisphere = 200-xxx
-where xxx corresponds to the creation index.
+### Crater_ID
+Same as Robbins' database except for craters added for which ID has been built from their location: northern hemisphere = 100-xxx, southern hemisphere = 200-xxx, -xxx corresponds to the order of creation.
 
-#### RADIUS
-Same as in the Robbins' database.
-Added craters had been defined as circles from three points placed on the crater rim: the radius is automatically computed.
+### RADIUS
+Same as Robbins' database except for craters added for which the radius has been determined from three points placed on the crater rim.
 
-#### X,Y
-Coordinates, same as in the Robbins' database.
-Added craters had been defined as circles from three points placed on the crater rim: the center is automatically computed.
+### X,Y
+Coordinates, same as Robbins' database except for craters added for which it corresponds to the centroid of circle shape created on Cesium.
 
-#### TYPE
-crater classification (int):
-- 1 = Valid (Simple craters without morphologic characteristics described above)
-- 2 = Layered (only Layered Ejecta Rampart Sinuous craters and Low-Aspect Ratio Layered Ejecta craters)
-- 3 = Ghost (Degraded impact craters, the same geologic unit is superposed to the crater floor and outside to the crater)
-- 4 = Secondary (Elongated craters or impact craters belonging to a crater chain in an area where the crater spatial density is anomalously high)
-- 5 = Invalid (The geologic structure identified by Robbins is not an impact craters)
+### TYPE
+crater classification (numerical):
+1 = other
+2 = layered
+3 = degraded
+4 = secondary
+5 = erroneous entry
 
-#### STATUS
-crater classification (string):
-- Valid
-- Layered
-- Ghost
-- Secondary
-- Invalid
+### STATUS
+crater classification (text)
 
-#### LRD_MORPH
+### LRD_MORPH
 Layered ejecta crater morphology:
 SLE : Single Layered Ejecta
 DLE : Double Layered Ejecta
 MLE : Multiple Layered Ejecta
 LARLE : Low-Aspect Ratio Layered Ejecta
 
-#### ORIGIN
-Secondary craters for which the primary crater source has been identified.
-The primary crater ID is indicated.
-If the secondary crater is produced by a double primary crater, crater ID of both primaries is mentionned.
+### ORIGIN
+Secondary craters for which the primary crater source has been identified. The primary crater ID is indicated. In case of double primary craters being produced secondaries, the crater ID of the couple is mentionned.
 
-#### ADDING
-null = Craters contained in the Robbins' database
-1 = Craters added by the reviewers
+### ADDING
+0 = Craters contained in the Robbins' database
+1 = Craters added on Cesium viewer
