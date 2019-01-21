@@ -17,7 +17,7 @@ crater classification (numerical):
 2 = layered
 3 = degraded
 4 = secondary
-5 = erroneous entry
+5 = misidentified entry
 
 ### STATUS
 crater classification (text)
